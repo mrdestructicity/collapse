@@ -1,0 +1,94 @@
+<html>
+<head>
+<style>
+* {
+	box-sizing: border-box;
+}
+
+.icon {
+	display: inline-block;
+	fill: currentColor;
+	height: 1em;
+	stroke-width: 0;
+	stroke: currentColor;
+	width: 1em;
+}
+</style>
+<link href="collapse.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+
+<svg aria-hidden="true" style="position: absolute; width: 0; height: 0; overflow: hidden;" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<symbol id="icon-plus" viewBox="0 0 30 32">
+		<path d="M30.476 14.629h-13.714v-13.105h-3.048v13.105h-13.714v3.048h13.714v12.8h3.048v-12.8h13.714z"></path>
+	</symbol>
+</svg>
+
+<div class="collapse" id="collapse1">
+
+	<ul class="collapse__controls" aria-label="Collapse Controls">
+	  	<li><button class="collapse__all-open">Open All</button>
+		<li><button class="collapse__all-close">Close All</button>
+	</ul>
+
+	<h2 class="collapse__heading">
+		<button class="collapse__button" id="section1a" disabled>
+			<span class="collapse__label">
+				Section #1A
+			</span>
+			<span class="collapse__icon">
+				<svg class="icon icon-plus" focusable="false"><use xlink:href="#icon-plus"></use></svg>
+			</span>
+		</button>
+	</h2>  
+
+	<div class="collapse__panel">
+		 <p>Section 1A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit dignissim accumsan. Sed suscipit nisi eu ipsum bibendum cursus in a lacus. Etiam eleifend porta ante, quis tincidunt lectus commodo quis. Donec aliquam nisi quis mattis euismod. Mauris vel lacinia est. Nullam vehicula lectus eros, pharetra mattis nisl efficitur et. Etiam cursus, augue nec pretium dictum, nibh lectus consequat lacus, ac pretium turpis nisl a sapien. Proin quis purus dictum, lobortis nunc quis, feugiat nisi. Sed malesuada ante risus, quis dictum diam efficitur eleifend. Aliquam sagittis, ex ac vehicula tincidunt, metus elit interdum massa, a finibus lorem magna ac diam. Duis quis facilisis enim, congue rutrum justo. Phasellus dictum massa consequat mi ultrices, vel facilisis urna feugiat.</p>
+		 <p>Section 1A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit dignissim accumsan. Sed suscipit nisi eu ipsum bibendum cursus in a lacus. Etiam eleifend porta ante, quis tincidunt lectus commodo quis. Donec aliquam nisi quis mattis euismod. Mauris vel lacinia est. Nullam vehicula lectus eros, pharetra mattis nisl efficitur et. Etiam cursus, augue nec pretium dictum, nibh lectus consequat lacus, ac pretium turpis nisl a sapien. Proin quis purus dictum, lobortis nunc quis, feugiat nisi. Sed malesuada ante risus, quis dictum diam efficitur eleifend. Aliquam sagittis, ex ac vehicula tincidunt, metus elit interdum massa, a finibus lorem magna ac diam. Duis quis facilisis enim, congue rutrum justo. Phasellus dictum massa consequat mi ultrices, vel facilisis urna feugiat.</p>
+	</div>
+
+	<h2 class="collapse__heading">
+		<button class="collapse__button" id="section2a" disabled>
+			<span class="collapse__label">
+				Section #2A
+			</span>
+			<span class="collapse__icon">
+				<svg class="icon icon-plus" focusable="false"><use xlink:href="#icon-plus"></use></svg>
+			</span>
+		</button>
+	</h2>  
+
+	<div class="collapse__panel">
+		 <p>Section 2A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit dignissim accumsan. Sed suscipit nisi eu ipsum bibendum cursus in a lacus. Etiam eleifend porta ante, quis tincidunt lectus commodo quis. Donec aliquam nisi quis mattis euismod. Mauris vel lacinia est. Nullam vehicula lectus eros, pharetra mattis nisl efficitur et. Etiam cursus, augue nec pretium dictum, nibh lectus consequat lacus, ac pretium turpis nisl a sapien. Proin quis purus dictum, lobortis nunc quis, feugiat nisi. Sed malesuada ante risus, quis dictum diam efficitur eleifend. Aliquam sagittis, ex ac vehicula tincidunt, metus elit interdum massa, a finibus lorem magna ac diam. Duis quis facilisis enim, congue rutrum justo. Phasellus dictum massa consequat mi ultrices, vel facilisis urna feugiat.</p>
+	</div>
+
+	<h2 class="collapse__heading">
+		<button class="collapse__button" id="section3a" disabled>
+			<span class="collapse__label">
+				Section #3A
+			</span>
+			<span class="collapse__icon">
+				<svg class="icon icon-plus" focusable="false"><use xlink:href="#icon-plus"></use></svg>
+			</span>
+		</button>
+	</h2>  
+
+	<div class="collapse__panel">
+		 <p>Section 3A Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse suscipit dignissim accumsan. Sed suscipit nisi eu ipsum bibendum cursus in a lacus. Etiam eleifend porta ante, quis tincidunt lectus commodo quis. Donec aliquam nisi quis mattis euismod. Mauris vel lacinia est. Nullam vehicula lectus eros, pharetra mattis nisl efficitur et. Etiam cursus, augue nec pretium dictum, nibh lectus consequat lacus, ac pretium turpis nisl a sapien. Proin quis purus dictum, lobortis nunc quis, feugiat nisi. Sed malesuada ante risus, quis dictum diam efficitur eleifend. Aliquam sagittis, ex ac vehicula tincidunt, metus elit interdum massa, a finibus lorem magna ac diam. Duis quis facilisis enim, congue rutrum justo. Phasellus dictum massa consequat mi ultrices, vel facilisis urna feugiat.</p>
+	</div>
+
+</div>
+
+<script src="collapse.js"></script>
+<script>
+
+window.addEventListener('load', (event) => {
+	document.querySelectorAll('.collapse').forEach( function( element ) {
+		element.collapse = Object.assign(new Collapse(element));
+	});
+});
+
+</script>
+
+</body>
+</html>

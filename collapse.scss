@@ -1,0 +1,98 @@
+// Global Variables
+$collapse: '.collapse';
+
+// Default State
+
+.collapse { 
+
+	// Local Variables
+	$this: &;
+
+	// Styles
+
+	&__heading {
+	}
+
+	&__button,
+	&__button[disabled] {
+		align-items: center;
+		background: inherit;
+		border: inherit;
+		color: inherit;
+		font: inherit;
+		cursor: default;
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		padding: inherit;
+		width: 100%;
+	}
+
+	&__label {
+		pointer-events: none;
+	}
+
+	&__icon {
+		display: none;
+		flex: 0 0;
+		pointer-events: none;
+		transition: transform 0.5s ease;
+	}
+
+	&__panel {
+		position: relative;
+		padding: 1px 0; // This needs at least 1px of padding on the top and bottom or height cannot be corretly calculated.
+	}
+
+	&__all-open,
+	&__all-close,
+	&__controls {
+		display: none;
+	}
+}
+
+// Activated State
+
+#{$collapse}--activated {
+
+	// Local Variables
+	$this: &;
+
+	#{$collapse}__button {
+		cursor: pointer;
+
+		&[aria-expanded='true'] {
+			#{$collapse}__icon {
+				transform: rotate(45deg);
+			}
+		}
+	}
+
+	#{$collapse}__icon {
+		display: block;
+
+		@media print {
+			display: none;
+		}
+	}
+
+	#{$collapse}__panel {
+		height: 0;
+		overflow: hidden;
+		transition: height 0.5s ease;
+
+		@media print {
+			height: auto
+		}
+	}
+
+	#{$collapse}__all-open,
+	#{$collapse}__all-close,
+	#{$collapse}__controls {
+		display: block;
+
+		@media print {
+			display: none;
+		}
+	}
+}

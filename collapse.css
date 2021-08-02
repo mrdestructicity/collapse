@@ -1,0 +1,52 @@
+.collapse__button, .collapse__button[disabled] {
+  align-items: center;
+  background: inherit;
+  border: inherit;
+  color: inherit;
+  font: inherit;
+  cursor: default;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  padding: inherit;
+  width: 100%; }
+.collapse__label {
+  pointer-events: none; }
+.collapse__icon {
+  display: none;
+  flex: 0 0;
+  pointer-events: none;
+  transition: transform 0.5s ease; }
+.collapse__panel {
+  position: relative;
+  padding: 1px 0; }
+.collapse__all-open, .collapse__all-close, .collapse__controls {
+  display: none; }
+
+.collapse--activated .collapse__button {
+  cursor: pointer; }
+  .collapse--activated .collapse__button[aria-expanded='true'] .collapse__icon {
+    transform: rotate(45deg); }
+.collapse--activated .collapse__icon {
+  display: block; }
+  @media print {
+    .collapse--activated .collapse__icon {
+      display: none; } }
+.collapse--activated .collapse__panel {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s ease; }
+  @media print {
+    .collapse--activated .collapse__panel {
+      height: auto; } }
+.collapse--activated .collapse__all-open,
+.collapse--activated .collapse__all-close,
+.collapse--activated .collapse__controls {
+  display: block; }
+  @media print {
+    .collapse--activated .collapse__all-open,
+    .collapse--activated .collapse__all-close,
+    .collapse--activated .collapse__controls {
+      display: none; } }
+
+/*# sourceMappingURL=collapse.css.map */
